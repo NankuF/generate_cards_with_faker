@@ -9,17 +9,19 @@ fake = Faker('ru_RU')
 
 
 def get_random_runic_skills() -> []:
-    skills = ['Стремительный прыжок',
-              'Электрический выстрел',
-              'Ледяной удар',
-              'Стремительный удар',
-              'Кислотный взгляд',
-              'Тайный побег',
-              'Ледяной выстрел',
-              'Огненный заряд']
+    skills = [
+        'Стремительный прыжок',
+        'Электрический выстрел',
+        'Ледяной удар',
+        'Стремительный удар',
+        'Кислотный взгляд',
+        'Тайный побег',
+        'Ледяной выстрел',
+        'Огненный заряд'
+    ]
     selected_skills = random.sample(skills, 3)
 
-    rune_alphabet = {
+    runic_alphabet = {
         'а': 'а͠', 'б': 'б̋', 'в': 'в͒͠',
         'г': 'г͒͠', 'д': 'д̋', 'е': 'е͠',
         'ё': 'ё͒͠', 'ж': 'ж͒', 'з': 'з̋̋͠',
@@ -44,13 +46,13 @@ def get_random_runic_skills() -> []:
         'Э': 'Э͒͠͠', 'Ю': 'Ю̋͠', 'Я': 'Я̋',
         ' ': ' '
     }
-    modified_skill = ''
+    runic_font_skill = ''
     runic_skills = []
     for skill in selected_skills:
         for symbol in skill:
-            modified_skill += rune_alphabet[symbol]
-        runic_skills.append(modified_skill)
-        modified_skill = ''
+            runic_font_skill += runic_alphabet[symbol]
+        runic_skills.append(runic_font_skill)
+        runic_font_skill = ''
     return runic_skills
 
 
@@ -58,7 +60,7 @@ def generate_cards(count: int):
     template_path = os.path.join(os.sep, os.getcwd(), 'src', 'template.svg')
 
     for i in range(1, count + 1):
-        cards_path = os.path.join(os.sep, os.getcwd(), 'cards', f'result_{i}.svg')
+        cards_path = os.path.join(os.sep, os.getcwd(), 'cards', f'card_{i}.svg')
 
         runic_skills = get_random_runic_skills()
 
