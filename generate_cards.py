@@ -19,8 +19,6 @@ def get_random_runic_skills() -> []:
         'Ледяной выстрел',
         'Огненный заряд'
     ]
-    selected_skills = random.sample(skills, 3)
-
     runic_alphabet = {
         'а': 'а͠', 'б': 'б̋', 'в': 'в͒͠',
         'г': 'г͒͠', 'д': 'д̋', 'е': 'е͠',
@@ -46,8 +44,10 @@ def get_random_runic_skills() -> []:
         'Э': 'Э͒͠͠', 'Ю': 'Ю̋͠', 'Я': 'Я̋',
         ' ': ' '
     }
-    runic_font_skill = ''
+
     runic_skills = []
+    runic_font_skill = ''
+    selected_skills = random.sample(skills, 3)
     for skill in selected_skills:
         for symbol in skill:
             runic_font_skill += runic_alphabet[symbol]
