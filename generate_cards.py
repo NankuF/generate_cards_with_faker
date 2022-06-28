@@ -5,8 +5,6 @@ from faker import Faker
 
 import file_operations
 
-fake = Faker('ru_RU')
-
 
 def get_random_runic_skills() -> []:
     skills = [
@@ -86,4 +84,5 @@ def main():
 
 
 if __name__ == '__main__':
+    fake = Faker('ru_RU')
     main()
