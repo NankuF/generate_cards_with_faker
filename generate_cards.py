@@ -1,5 +1,6 @@
 import os.path
 import random
+from pathlib import Path
 
 from faker import Faker
 
@@ -99,6 +100,7 @@ def get_random_runic_skills() -> []:
 
 
 def generate_cards(count: int):
+    Path(os.path.join(os.sep, os.getcwd(), 'cards')).mkdir(exist_ok=True)
     template_path = os.path.join(os.sep, os.getcwd(), 'src', 'template.svg')
 
     for i in range(1, count + 1):
