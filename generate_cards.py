@@ -100,6 +100,8 @@ def get_random_runic_skills() -> []:
 
 
 def generate_cards(count: int):
+    fake = Faker('ru_RU')
+
     Path(os.path.join(os.sep, os.getcwd(), 'cards')).mkdir(exist_ok=True)
     template_path = os.path.join(os.sep, os.getcwd(), 'src', 'template.svg')
 
@@ -130,5 +132,4 @@ def main():
 
 
 if __name__ == '__main__':
-    fake = Faker('ru_RU')
     main()
