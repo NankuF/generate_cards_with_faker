@@ -10,14 +10,18 @@
 ```commandline
 git clone https://github.com/NankuF/generate_cards_with_faker.git
 ```
-2. Установите зависимости:<br> 
+2. Создайте виртуальное окружение:<br>
+```commandline
+python -m venv venv
+```
+3. Установите зависимости:<br> 
 ```commandline
 pip install -r requirements.txt
 ```
-3. Запустите код в консоли:
+3. Запустите код в консоли:<br>
 ```commandline
 python generate_cards.py
 ```
-4. Перейдите в директорию cards и откройте сгенерированную карточку.
-![img.png](img.png)
-![img_1.png](img_1.png)
+4. Перейдите в директорию cards и откройте сгенерированную карточку.<br>
+![img.png](img.png)<br>
+![img_1.png](img_1.png)<br>
